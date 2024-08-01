@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>10+50 = <span id="question">?</span></h1>
+    <input type="button" value="결과보기" onclick="printResult()">
+    <script>
+
+        function sum (x , y){
+            result = x + y;
+        }
+
+
+
+        function printResult(){
+            var result = sum (30,50);
+            var myTag =document.getElementById("question");
+            alert(myTag.tagName);// 실제값을 보여줌 myTag 시 주소값만 알랴즌다
+          //  myTag.innerText="<font color ='red" +result+ "</font>";// 결과값의 주소를 보여준다.
+            myTag.innerHTML="<font color ='red" +result+ "</font>";// 뻘겋게 나온다 . 
+        }
+    </script>
+</body>
+</html>

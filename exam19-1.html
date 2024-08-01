@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myid{
+            background-color: #ff0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="myid">안녕하세요</h1> 
+    <h1 class="myid">자바스트립트 입니다.</h1>
+    <h1 class="myid">강의 참 재미있죠</h1>
+    <a href="#" onclick="doprint()"> 자바스트립트 함수 호출</a>
+    
+<!-- 아이디는 유니크한 태그만 하면 좋다 . -->
+    <script>
+        function dopoint(){ // id는 한개의 데이터만 얻을때 사용한다. 
+            var myTags= document.getElementsClassByName("myid");
+            console.log("myTags=" + myTags);
+
+            for(var i =0; i<myTags.length; i++){
+                myTags[i].innerHTML="자바스트립트가 실행되었습니다."
+            }//for
+        }
+    </script>
+</body>
+</html>
+
+<!--
+    속성 class="" 로 지정된 Element 오기 ....
+    1.getElementsByClassName()
+    -HTMLCollection 타입으로 리턴해준다. 
+
+
+
+    
+    css 선택자를  지정된Element 오기 
+    1. querySelector()
+    -1개만 얻어온다. 
+    -파라메터로 css 선택자를 넣어줘야 한다. 
+
+    2.querySelectAll()
+    - 여러개의 속성을 갇고온다. 
+    -nodeList 타입으로 얻어온다. 
+    -파라메터로 css 선택자를 넣어줘야 한다. 
+
+
+-->

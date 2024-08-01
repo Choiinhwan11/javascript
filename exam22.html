@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="startTime"> 
+    <h1 id="timer">현재 시간을 보여줍니다.</h1>
+    <script>
+        function startTime(){//구현을 해준다.  바디태그를 다 읽고 난 후 온로드로 바로간다. 
+            setInterval(printtTime,1000);//단위가 1/1000
+        }
+        function printtTime(){
+            var days = ["월","화","수"," 목","금","토","일"]
+            var today = new Date();
+
+            var yy= today.getFullYear();
+            var mm =today.getMonth();
+            var dd = today.getDate();
+            var i = today.getDay();
+            var day = days[i];
+
+
+            var hh = today.getHours();
+            var mi = today.getMinute();
+            var ss = today.getSeconds();
+
+
+            var result= yy+"-"+mm+"-"+dd+"-"+day+"요일"+hh+":"+mi+":"+ss;
+            document.getElementById("timer").innerHTML=result;
+//1 초가 지날때 마다 새롱운 시간을 계산해야한다. 
+
+        }
+    </script>
+    
+</body>
+</html>
